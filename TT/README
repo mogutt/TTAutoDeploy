@@ -63,3 +63,8 @@ IM_SERVER:
 
 模块部署:
 TeamTalk的各模块支持安装到不同的服务器上,所以部署可以根据自己的需要进行模块安装,主要修改的地方即为上述各个模块中的IP地址设置。根据自己的网络拓扑在conf文件夹下的各个配置文件中预先设置正确的IP地址,然后执行模块内的"setup install"即可
+
+
+IM_SERVER与IM_DB_PROXY架构图如下:
+![](https://github.com/mogutt/TTServer/blob/master/docs/pics/server.png)
+
