@@ -66,5 +66,6 @@ TeamTalk的各模块支持安装到不同的服务器上,所以部署可以根�
 
 
 IM_SERVER与IM_DB_PROXY架构图如下:
+
 ![](https://github.com/mogutt/TTServer/blob/master/docs/pics/server.png)
 
