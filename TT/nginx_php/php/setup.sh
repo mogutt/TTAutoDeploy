@@ -1,7 +1,7 @@
 #!/bin/bash
 # this is a setup scripts for php
-# author: shiwei
-# date: 02/19/2013
+# author: luoning
+# date: 09/06/2014
 
 # setup php
 
@@ -89,7 +89,8 @@ build_php() {
 	    --enable-gd-native-ttf \
 	    --with-mysql=mysqlnd \
 	    --with-mysqli=mysqlnd \
-	    --with-pdo-mysql=mysqlnd
+	    --with-pdo-mysql=mysqlnd \
+	    --with-curl
 	    #--with-apxs2=$APACHE_INSTALL_DIR/bin/apxs \
 	    #--with-zlib=$INSTALL_DIR \
 	    #--with-zlib-dir=$INSTALL_DIR \
@@ -200,6 +201,16 @@ build_xml() {
 	fi
 }
 
+build_curl() {
+	clean_yum
+	yum -y install curl-devel
+	if [ $? -eq 0 ]; then
+		echo "yum install curl-devel successed."
+	else
+		echo "Error: yum install curl-devel failed."
+		return 1;
+	fi
+}
 
 build_all()
 {
@@ -253,6 +264,13 @@ build_all()
 		exit 1
 	fi
 
+	build_curl
+	if [ $? -eq 0 ]; then
+		echo "build curl successed."
+	else
+		echo "Error: build curl failed."
+		exit 1
+	fi
 
 	download $PHP.tar.gz $PHP_DOWNLOAD_PATH
 	if [ $? -eq 1 ]; then

@@ -18,6 +18,7 @@ PERCONA_SERVER_DOWNLOAD_PATH=http://www.percona.com/downloads/Percona-Server-5.6
 
 MYSQL_PASSWORD=12345
 IM_SQL=macim.sql
+MYSQL_CONF=my.cnf
 
 print_hello(){
 	echo "==========================================="
@@ -130,6 +131,13 @@ build_percona() {
 		echo "Error: install percona-server failed";
 		return 1;
 	fi
+	
+	if [ -f ./conf/$MYSQL_CONF ]; then
+		cp -f ./conf/$MYSQL_CONF /etc/
+	else
+		echo "Error: $MYSQL_CONF is not existed";
+		return 1;
+	fi
 }
 
 run_percona() {
@@ -160,18 +168,22 @@ set_password() {
 
 
 create_database() {
+	cd ./conf/
 	if [ -f "$IM_SQL" ]; then
 		echo "$IM_SQL existed, begin to run $IM_SQL"
 	else
 		echo "Error: $IM_SQL not existed."
+		cd ..
 		return 1
 	fi
 
 	mysql -u root -p$MYSQL_PASSWORD < macim.sql
 	if [ $? -eq 0 ]; then
 		echo "run macim.sql successed."
+		cd ..
 	else
 		echo "Error: run macim.sql failed."
+		cd ..
 		return 1
 	fi
 }

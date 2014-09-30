@@ -493,6 +493,8 @@ check_all() {
 	if [ $? -eq 1 ]; then
 		exit 1
 	fi
+	
+	echo "Check TeamTalk successed, and you can install TeamTalk now."
 }
 
 clean_yum() {

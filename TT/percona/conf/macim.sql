@@ -17,7 +17,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 
 
 DROP DATABASE IF EXISTS macim;
-CREATE DATABASE macim;
+CREATE DATABASE macim DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE macim;
 
 -- ----------------------------
