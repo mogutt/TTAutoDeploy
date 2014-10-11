@@ -67,7 +67,7 @@ print_hello() {
 	echo "========================================================================="
 	echo "A tool to auto-compile & install TeamTalk on Linux "
 	echo ""
-	echo "For more information please visit http://www.imteamtalk.com/"
+	echo "For more information please visit https://github.com/mogutt/TTAutoDeploy/"
 	echo "========================================================================="
 }
 
