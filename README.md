@@ -15,7 +15,8 @@
 ######PERCONA(MYSQL): 
 	在安装脚本setup.sh中默认设置了PERCONA root用户的初始密码为12345,可以修改“MYSQL_PASSWORD=12345”
 	对密码进行重设,一旦对密码进行更改,需要同时在IM_WEB与IM_DB_PROXY中进行更改,详见IM_WEB和IM_DB_PROXY
-	配置说明
+	配置说明。
+	如果使用的是已存在的percona或者mysql,可以直接使用"mysql -u $USER -p$PASSWORD < macim.sql"进行库与表的创建。
 
 ######REDIS: 
 	在conf目录下包含了redis.conf的配置文件, 可以自行进行优化配置,也可以选择不改动这个文件
@@ -23,8 +24,11 @@
 ######IM_WEB: 
 	在conf目录下包含了db.php和im.com.conf两个配置文件,其中im.com.conf为NGINX所需要的配置文件,建议不
 	改动;db.php文件主要配置了链接PERCONA所需要的参数,根据自己的需求修改'connectionString','username',
-	'password'这三个参数
-
+	'password'这三个参数。
+	如果使用的是现有的nginx+php环境,可以修改setup.sh中的 PHP_WEB_SETUP_PATH为nginx放置web代码的路径,
+	并且将PHP_NGINX_CONF_PATH修改为nginx配置文件的路径然后执行setup.sh脚本即可
+	
+	
 ######IM_DB_PROXY: 
 	在安装配置脚本setup.sh中, DB_PROXY的默认监听Port设置为11000,如果被更改需要同时对IM_SERVER中的配
 	置进行更改，详见IM_SERVER配置说明;在conf目录下,包含了cache-online.properties和db-online.properties
