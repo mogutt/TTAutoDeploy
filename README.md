@@ -1,3 +1,6 @@
+#公告
+我们没有预料到大家对我们Teamtalk反响如此热烈，还没正式对外开放就有这么多人关注，目前github上的代码是早期版本，还存在一些问题，最新的代码还没来得及提交，开发人员正在努力中，非常感谢大家对Teamtalk开源的关注和支持~
+
 #安装说明:
 	TeamTalk整套服务提供模块部署脚本和一键部署方案，主要模块有JDK,NGINX,PHP,PERCONA(MYSQL),
 	REDIS,IM_WEB,IM_DB_PROXY,IM_SERVER,其中IM_WEB,IM_DB_PROXY,IM_SERVER为自主开发模块,其余
