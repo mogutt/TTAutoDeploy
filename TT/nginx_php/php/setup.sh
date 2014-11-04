@@ -90,15 +90,15 @@ build_php() {
 	    --with-mysql=mysqlnd \
 	    --with-mysqli=mysqlnd \
 	    --with-pdo-mysql=mysqlnd \
-	    --with-curl
-	    #--with-apxs2=$APACHE_INSTALL_DIR/bin/apxs \
-	    #--with-zlib=$INSTALL_DIR \
-	    #--with-zlib-dir=$INSTALL_DIR \
-	    #--with-libxml-dir=$INSTALL_DIR \
-	    #--with-freetype-dir=$INSTALL_DIR \
-	    #--with-jpeg-dir=$INSTALL_DIR \
-	    #--with-png-dir=$INSTALL_DIR \
-	    #--with-gd=$INSTALL_DIR \
+	    --with-curl	\
+	    #--with-apxs2 \
+	    --with-zlib \
+	    --with-zlib-dir \
+	    --with-libxml-dir \
+	    --with-freetype-dir \
+	    --with-jpeg-dir \
+	    --with-png-dir \
+	    --with-gd 
 	    
 	$MAKE
 	if [ $? -eq 0 ]; then
