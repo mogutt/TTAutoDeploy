@@ -75,4 +75,4 @@
 
 ###IM_SERVER与IM_DB_PROXY架构图如下:
 
-![](http://git.mogu.io/tt/ttserver/raw/af02deb713bd46760ec9c99ba209a83fb836c6f9/cpp/TT_Server.jpg)
+![](https://raw.githubusercontent.com/mogutt/TTServer/master/docs/pics/server.jpg)
