@@ -76,6 +76,9 @@ build_im_server() {
 		cp -f ./conf/$ROUTE_SERVER_CONF $INSTALL_DIR/$IM_SERVER/$ROUTE_SERVER/
 		cp -f ./conf/$FILE_SERVER_CONF $INSTALL_DIR/$IM_SERVER/$FILE_SERVER/
 		cp -f ./conf/$MSFS_SERVER_CONF $INSTALL_DIR/$IM_SERVER/$MSFS_SERVER/
+		
+		chmod 755 $INSTALL_DIR/$IM_SERVER/restart.sh
+	
 		set +x
 	else 
 		echo "Error: unzip im-server failed."
