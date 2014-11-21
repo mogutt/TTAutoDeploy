@@ -55,6 +55,7 @@ build_web(){
 	fi
 
 	set -x
+	mkdir -p $PHP_WEB_SETUP_PATH
 	cp -r $PHP_WEB/ $PHP_WEB_SETUP_PATH
 	cp ./conf/$PHP_DB_CONF $PHP_DB_CONF_PATH/
 	set +x
