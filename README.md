@@ -4,7 +4,7 @@
 	均为开源解决方案,各个模块需要手动改动的地方如下:
 ######JDK: 
 	无需改动
-
+	jdk-7u67-linux-x64.rpm包由于过大，建议手动下载
 ######NGINX: 
 	无需改动
 
@@ -74,4 +74,5 @@
 
 
 ###IM_SERVER与IM_DB_PROXY架构图如下:
-![](https://github.com/mogutt/TTServer/blob/master/docs/pics/server.png)
+
+![](http://git.mogu.io/tt/ttserver/raw/af02deb713bd46760ec9c99ba209a83fb836c6f9/cpp/TT_Server.jpg)
