@@ -10,6 +10,7 @@ DBPROXY=ttjavaserverPack
 LISTEN_PORT=11000
 REDIS_CONF=cache-online.properties
 MYSQL_CONF=db-online.properties
+COMMON_CONF=common-online.properties
 
 print_hello(){
 	echo "==========================================="
@@ -49,6 +50,7 @@ build_db_proxy(){
  		set -x 
 		cp -f ./conf/$REDIS_CONF $INSTALL_DIR/$DBPROXY/
 		cp -f ./conf/$MYSQL_CONF $INSTALL_DIR/$DBPROXY/
+		cp -f ./conf/$COMMON_CONF $INSTALL_DIR/$DBPROXY/
 		set +x
  	else	
  		echo "Error: unzip $DBPROXY failed."
@@ -59,6 +61,7 @@ build_db_proxy(){
 run_db_proxy(){
 	echo "start DB PROXY..."
 	cd $INSTALL_DIR/$DBPROXY
+	chmod +x startup.sh
  	./startup.sh $LISTEN_PORT
 }
 

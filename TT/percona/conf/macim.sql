@@ -276,6 +276,22 @@ CREATE TABLE `IMUsers` (
   KEY `index_uname` (`uname`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10038 DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `IMAudio`;
+CREATE TABLE `IMAudio` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) unsigned NOT NULL COMMENT '用户的关系id',
+  `toUserId` int(11) unsigned NOT NULL COMMENT '发送用户的id',
+  `path` varchar(255) DEFAULT '' COMMENT '消息内容',
+  `fileSize` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '发送用户的id',
+  `costTime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '发送用户的id',
+  `created` int(11) unsigned NOT NULL COMMENT '接收用户的id',
+  PRIMARY KEY (`id`),
+  KEY `idx_userId_toUserId_path` (`userId`,`toUserId`,`path`),
+  KEY `idx_toUserId` (`toUserId`),
+  KEY `idx_path` (`path`),
+  KEY `idx_created` (`created`)
+) ENGINE=InnoDB AUTO_INCREMENT=17346 DEFAULT CHARSET=utf8;
+
 -- ----------------------------
 --  Records of `IMUsers`
 -- ----------------------------

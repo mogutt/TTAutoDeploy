@@ -5,14 +5,14 @@
 
 # setup percona
 
-PERCONA_SHARED=Percona-Server-shared-56-5.6.20-rel68.0.el6.x86_64
+PERCONA_SHARED=Percona-Server-shared-56-5.6.21-rel70.0.el6.x86_64
 PERCONA_SHARED_DOWNLOAD_PATH=http://www.percona.com/downloads/Percona-Server-5.6/LATEST/binary/redhat/6/x86_64/$PERCONA_SHARED.rpm
 
-PERCONA_CLIENT=Percona-Server-client-56-5.6.20-rel68.0.el6.x86_64
+PERCONA_CLIENT=Percona-Server-client-56-5.6.21-rel70.0.el6.x86_64
 PERCONA_CLIENT_DOWNLOAD_PATH=http://www.percona.com/downloads/Percona-Server-5.6/LATEST/binary/redhat/6/x86_64/$PERCONA_CLIENT.rpm
 
 
-PERCONA_SERVER=Percona-Server-server-56-5.6.20-rel68.0.el6.x86_64
+PERCONA_SERVER=Percona-Server-server-56-5.6.21-rel70.0.el6.x86_64
 PERCONA_SERVER_DOWNLOAD_PATH=http://www.percona.com/downloads/Percona-Server-5.6/LATEST/binary/redhat/6/x86_64/$PERCONA_SERVER.rpm
 
 

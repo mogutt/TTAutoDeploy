@@ -1,10 +1,3 @@
-# 公告
-近期有很多热衷开源的geek们在问最新代码的更新日期，我们在此说明一下，由于近期工程师们都在备战双十一，开源的投入会相对减少，所以我们把提交最新代码的时间定在2014年11月18日，非常感谢大家对TeamTalk的关注和支持~具体安排如下：
-* 11.11之前工程师全力备战双十一，请见谅
-* 11.12～11.14 C++ Server, Java DB Proxy, PHP, android, iOS, Win Client代码移植, MAC Client延后（功能还未完全）
-* 11.15～11.17 测试TeamTalk，包括PHP，android, iOS, Win Client 端功能走通，测试一键部署脚本
-* 11.18  上传代码并正式发布
-
 #安装说明:
 	TeamTalk整套服务提供模块部署脚本和一键部署方案，主要模块有JDK,NGINX,PHP,PERCONA(MYSQL),
 	REDIS,IM_WEB,IM_DB_PROXY,IM_SERVER,其中IM_WEB,IM_DB_PROXY,IM_SERVER为自主开发模块,其余
@@ -38,9 +31,9 @@
 	
 ######IM_DB_PROXY: 
 	在安装配置脚本setup.sh中, DB_PROXY的默认监听Port设置为11000,如果被更改需要同时对IM_SERVER中的配
-	置进行更改，详见IM_SERVER配置说明;在conf目录下,包含了cache-online.properties和db-online.properties
-	两个配置文件,其中cache-online为REDIS的配置参数,db-online为PERCONA的配置参数,若PERCONA进行过更改,则改
-	成对应的链接参数即可
+	置进行更改，详见IM_SERVER配置说明;在conf目录下,包含了cache-online.properties,db-online.properties和common-online.properties
+	三个配置文件,其中cache-online为REDIS的配置参数,db-online为PERCONA的配置参数,若PERCONA进行过更改,则改
+	成对应的链接参数即可,common-online中的ip需要改成IM_SERVER中的MSFS_SERVER的可访问地址
 
 ######IM_SERVER: 
 	IM_SERVER下共有5种服务器,所以也需要对这些服务器进行分别配置
@@ -63,7 +56,6 @@
 	根据说明配置需要监听的对应IP Port即可
 
 	4.FILE_SERVER: 
-	ListenIP为本机监听的IP
 	Address为Client端可以直接可以访问的IP地址,对于需要公网访问的情况下,如果是路由器映射,则需要填路由器
 	映射在公网上的地址
 
