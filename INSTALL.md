@@ -60,7 +60,12 @@
 	ListenPort=8500			
 	TaskTimeout=60        
 	
+**java_db_proxy:**
 	
+	common-online.properties:
+	com.mogujie.ares.config.file.serverurl=http://192.168.1.2:8600/
+
+
 ###2.公网ip
 	安装的机器为多网卡，包含内网网卡和公网网卡
 	内网ip为：192.168.1.2
@@ -123,7 +128,10 @@
 	ListenPort=8500			
 	TaskTimeout=60        
 	
-
+**java_db_proxy:**
+	
+	common-online.properties:
+	com.mogujie.ares.config.file.serverurl=http://192.168.1.2:8600/
 
 
 ###3.公网ip，路由器映射
@@ -188,3 +196,7 @@
 	ListenPort=8500			
 	TaskTimeout=60        
 	
+**java_db_proxy:**
+	
+	common-online.properties:
+	com.mogujie.ares.config.file.serverurl=http://192.168.1.2:8600/
