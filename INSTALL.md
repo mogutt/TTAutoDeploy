@@ -200,3 +200,9 @@
 	
 	common-online.properties:
 	com.mogujie.ares.config.file.serverurl=http://192.168.1.2:8600/
+	
+	
+#WEB使用注意
+	1.TeamTalk安装成功后,登录php后台,比如：http://192.168.1.2
+	默认用户名:admin, 密码:admin。 
+	
