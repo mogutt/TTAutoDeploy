@@ -124,11 +124,12 @@ CREATE TABLE `IMGroupMessage` (
   `status` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '预留',
   `updated` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
   `created` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `messageType` tinyint(3) unsigned NOT NULL DEFAULT '17' COMMENT '群消息类型,18为群语音,17为文本',
   PRIMARY KEY (`id`),
   KEY `idx_groupId_created` (`groupId`,`created`),
   KEY `idx_userId_groupId_created` (`userId`,`groupId`,`created`),
   KEY `idx_created` (`created`)
-) ENGINE=MyISAM AUTO_INCREMENT=181 DEFAULT CHARSET=utf8 COMMENT='IM群消息表';
+) ENGINE=MyISAM AUTO_INCREMENT=1797 DEFAULT CHARSET=utf8 COMMENT='IM群消息表'
 
 -- ----------------------------
 --  Table structure for `IMGroupRelation`
