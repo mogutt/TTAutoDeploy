@@ -129,7 +129,7 @@ CREATE TABLE `IMGroupMessage` (
   KEY `idx_groupId_created` (`groupId`,`created`),
   KEY `idx_userId_groupId_created` (`userId`,`groupId`,`created`),
   KEY `idx_created` (`created`)
-) ENGINE=MyISAM AUTO_INCREMENT=1797 DEFAULT CHARSET=utf8 COMMENT='IM群消息表'
+) ENGINE=MyISAM AUTO_INCREMENT=1797 DEFAULT CHARSET=utf8 COMMENT='IM群消息表';
 
 -- ----------------------------
 --  Table structure for `IMGroupRelation`
