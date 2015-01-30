@@ -244,6 +244,7 @@ CREATE TABLE `IMTransmitFile` (
   `toUserId` int(10) unsigned NOT NULL COMMENT '接收者蘑菇街用户ID',
   `filePath` varchar(500) NOT NULL DEFAULT '' COMMENT '文件名',
   `fsize` int(10) unsigned NOT NULL COMMENT '发送者蘑菇街用户ID',
+  `taskId` varchar(100) NOT NULL DEFAULT '' COMMENT '任务ID',
   `status` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '状态(1 => 等待接收, 0=> 已接收)',
   `created` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
   `updated` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
